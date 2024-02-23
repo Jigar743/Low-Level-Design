@@ -1,4 +1,4 @@
-package Multithreading;
+package LLD1.Multithreading;
 
 public class NumberPrinter implements Runnable {
 
@@ -10,6 +10,6 @@ public class NumberPrinter implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Number is " + value);
+        System.out.println("Number is " + value + " " + Thread.currentThread().getName());
     }
 }

@@ -1,12 +1,12 @@
-package Multithreading;
+package LLD1.Multithreading;
 
-import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(("From Multithreading package!"));
-        Executor e = Executors.newSingleThreadExecutor();
+        System.out.println(("From LLD1.Multithreading package!"));
+        ExecutorService e = Executors.newSingleThreadExecutor();
 
         for (int i = 0; i < 100; i++) {
             e.execute(new NumberPrinter(i));
@@ -18,5 +18,7 @@ public class Main {
 
 //            NumberPrinter t = new NumberPrinter(i);
         }
+
+        e.shutdown();
     }
 }
