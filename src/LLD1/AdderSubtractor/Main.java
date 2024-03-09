@@ -14,7 +14,7 @@ public class Main {
 
 
         // with this both approach there is a problem of data synchronization due to shared variables.
-
+        // 1.
         ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.execute(adder);
         executorService.execute(subtractor);
@@ -27,6 +27,7 @@ public class Main {
             throw new RuntimeException(e);
         }
 
+        // 2.
 //        Thread adderThread = new Thread(adder);
 //        Thread subtractorThread = new Thread(subtractor);
 //
